@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrypt Image</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Encrypt Image with Message</h1>
+        <form method="POST" action="/encrypt" enctype="multipart/form-data" onsubmit="return validateForm()">
+            <input type="file" name="image" accept="image/*" onchange="previewImage(event, 'previewEncrypt')" required>
+            <img id="previewEncrypt"><br>
+            
+            <input type="text" name="message" placeholder="Enter secret message" required>
+            
+            <input type="password" id="passwordEncrypt" name="password" placeholder="Enter password" required>
+            <button type="button" class="toggle-btn" onclick="togglePassword('passwordEncrypt')">Show/Hide Password</button>
+            
+            <button type="submit" class="submit-btn">Encrypt and Download</button>
+        </form>
+
+        <a href="/decrypt" class="back-link">→ Go to Decrypt Page</a>
+    </div>
+</body>
+</html>

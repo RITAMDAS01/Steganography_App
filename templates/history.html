@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+</head>
+<body>
+    <h1>Past Encodings</h1>
+    <table>
+        <tr>
+            <th>Original File</th>
+            <th>Encoded File</th>
+            <th>Message (Encrypted)</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for record in records %}
+        <tr>
+            <td>{{ record.original_filename }}</td>
+            <td>{{ record.encoded_filename }}</td>
+            <td>{{ record.encrypted_message }}</td>
+            <td>{{ record.timestamp }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

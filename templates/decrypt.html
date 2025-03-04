@@ -1,0 +1,20 @@
+<head>
+    <title>Decrypt Image</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <h1>Decrypt Message from Image</h1>
+    <form method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+        <input type="file" name="image" accept="image/*" onchange="previewImage(event, 'previewDecrypt')" required><br>
+        <img id="previewDecrypt" src="#" alt="Image Preview" style="max-width: 300px; display: none;"><br>
+        <input type="password" id="passwordDecrypt" name="password" placeholder="Enter password" required>
+        <button type="button" onclick="togglePassword('passwordDecrypt')">Show/Hide</button><br>
+        <button type="submit">Decrypt</button>
+    </form>
+    {% if message %}
+        <h2>Decrypted Message: {{ message }}</h2>
+    {% endif %}
+    <br>
+    <a href="/">Go to Encrypt Page</a>
+</body>
