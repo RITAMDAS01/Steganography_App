@@ -89,8 +89,3 @@ The app logs every encryption and decryption into database.db with:
 
 Free to use for learning and educational purposes.
 
-
----
-
-✅ Just copy the entire block above and paste it into your `README.md` file on GitHub. Let me know if you'd like it uploaded or zipped with your full project!
-
