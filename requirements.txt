@@ -1,2 +1,2 @@
 flask==2.2.5
-pillow==10.0.0
+pillow==9.5.0
